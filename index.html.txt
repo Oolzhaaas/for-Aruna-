@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аруна, кешірші</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffdde1;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 2em;
+            color: #d6336c;
+        }
+        .heart {
+            font-size: 50px;
+            cursor: pointer;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #ff4b5c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #d6336c;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Аруна, мен қатты қателестім...</h1>
+    <div class="heart" onclick="showMessage()">❤️</div>
+    <div class="hidden" id="message">
+        <h2>Мен сені қатты жақсы көремін, кешірші мені!</h2>
+        <div class="buttons">
+            <button onclick="forgive()">Кешіремін</button>
+            <button onclick="notForgive()">Кешірмеймін</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById('message').classList.remove('hidden');
+    }
+    function forgive() {
+        document.body.innerHTML = "<h1>Мен сені қатты жақсы көремін! ❤️</h1><p>Сен мені кешірдің! 🥰</p>";
+    }
+    function notForgive() {
+        alert("Жарайды, бірақ мен бәрібір сені күтемін... 💔");
+    }
+</script>
+
+</body>
+</html>
